@@ -20,11 +20,16 @@ func makeMagicSquare (row : Int) -> Array<Array<Int>> {
             X1 = 2
             resultArray[Y1][X1] = result
         }
-//        else if (resultArray[Y1][X1] != 0 && Y1 < 0 ) {
-//            Y1 = (Y - 1) % row
-//            X1 = X
-//            resultArray[Y1][X1] = result
-//        }
+        else if (resultArray[Y1][X1] != 0 && 0 < Y-1 ) {
+            Y1 = (Y-1)
+            X1 =  X
+            resultArray[Y1][X1] = result
+        }
+        else if (resultArray[Y1][X1] != 0 && Y1 < 0 ) {
+            Y1 = 2
+            X1 = X
+            resultArray[Y1][X1] = result
+        }
         else if (resultArray[Y1][X1] != 0 && X1 < 0) {
             Y1 = (Y - 1) % row
             X1 = X
@@ -35,7 +40,6 @@ func makeMagicSquare (row : Int) -> Array<Array<Int>> {
             X1 = X
             resultArray[Y1][X1] = result
         }
-       
         else {
             resultArray[Y1][X1] = result
         }
@@ -55,4 +59,4 @@ func makeMagicSquare (row : Int) -> Array<Array<Int>> {
 
 print(makeMagicSquare(row: 3))
 
-// 조건을 맞춘다고 맞추는데 4부터 자꾸 안맞아요.... 
+
