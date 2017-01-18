@@ -42,7 +42,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LBt-pA-djt" kind="show" identifier="firstSegue" id="OHG-HF-1dn"/>
+                                    <action selector="buttonTouched:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zSE-cr-Jml"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +63,7 @@
         <!--PAGE1-->
         <scene sceneID="Sqm-xT-2b5">
             <objects>
-                <viewController title="PAGE1" id="LBt-pA-djt" customClass="YellowViewController" customModule="project_0117" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yellowVC" title="PAGE1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LBt-pA-djt" customClass="YellowViewController" customModule="project_0117" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YFq-4B-MkD"/>
                         <viewControllerLayoutGuide type="bottom" id="je8-pb-Han"/>

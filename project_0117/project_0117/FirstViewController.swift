@@ -24,9 +24,17 @@ class FirstViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "firstSegue" {
             let yellowVC : YellowViewController = segue.destination as! YellowViewController
+            
             yellowVC.titleString = "여기보세요"
+            
             yellowVC.dataDictionary = ["title" : "사전"]
         }
+    }
+    @IBAction func buttonTouched(_ sender: Any) {
+ //   storyboard?.instantiateViewController(withIdentifier:"yellowVC")
+    let yellowVC : YellowViewController = storyboard?.instantiateViewController(withIdentifier:"yellowVC") as! YellowViewController
+        yellowVC.dataDictionary = ["title":"사전"]
+        present(yellowVC, animated: true, completion: nil)
     }
 
   

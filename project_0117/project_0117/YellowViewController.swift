@@ -29,7 +29,8 @@ class YellowViewController: UIViewController {
         // super클래스(UIViewController)에 들어있는 viewWillLayoutSubview를 불러줘
         titleLabel.text  = titleString
         // 이전 VC에서 넘긴 값을 이 화면(yellowVC에 띄울수 있음)
-    titleLabel.text = dataDictionary ["title"] as? String
+    
+        titleLabel.text = dataDictionary ["title"] as? String
     }
     
     override func didReceiveMemoryWarning() {
