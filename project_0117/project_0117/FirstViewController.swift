@@ -25,8 +25,10 @@ class FirstViewController: UIViewController {
         if segue.identifier == "firstSegue" {
             let yellowVC : YellowViewController = segue.destination as! YellowViewController
             yellowVC.titleString = "여기보세요"
+            yellowVC.dataDictionary = ["title" : "사전"]
         }
     }
 
+  
 }
 
