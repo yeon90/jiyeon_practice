@@ -90,6 +90,18 @@
                                 <color key="textColor" red="0.30335667839419306" green="0.1480555950212169" blue="0.62568814766839376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-i8-bmh">
+                                <rect key="frame" x="196" y="154" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" red="0.13473704910000001" green="0.2116784518" blue="0.28345612050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.29262401643031555" green="0.62568814766839376" blue="0.19550268048480868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="LBt-pA-djt" eventType="touchUpInside" id="Tnx-FL-p3s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8468326026178763" green="0.874554728" blue="0.66054539118818212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -185,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="369"/>
+            <point key="canvasLocation" x="788" y="364"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -224,7 +236,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMn-Uz-IXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="788" y="-322"/>
         </scene>
     </scenes>
     <resources>

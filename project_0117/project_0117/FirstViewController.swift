@@ -34,7 +34,14 @@ class FirstViewController: UIViewController {
  //   storyboard?.instantiateViewController(withIdentifier:"yellowVC")
     let yellowVC : YellowViewController = storyboard?.instantiateViewController(withIdentifier:"yellowVC") as! YellowViewController
         yellowVC.dataDictionary = ["title":"사전"]
-        present(yellowVC, animated: true, completion: nil)
+ //       present(yellowVC, animated: true, completion: nil)
+        
+        if let navigation = self.navigationController {
+            navigation.pushViewController(yellowVC, animated: true)
+        }
+        else {
+            present(yellowVC, animated: true, completion: nil)
+        }
     }
 
   
