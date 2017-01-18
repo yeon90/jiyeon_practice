@@ -10,12 +10,12 @@ import Foundation
 
 
 struct MyModel {
-    var jsonArray : Array<[String : Any]>
+    var jsonArray : Array<[String : Any]> = []
     
     // 첫번째 함수 : jsonData를 넘겨서 Array로 만드는(?)함수
     
-    mutating func makeJSONArray(jsonData : Data) {
-        let json = try? JSONSerialization.jsonObject(with: jsonData, options:[])
+    mutating func makeJSONArray(jsonData1 : Data) {
+        let json = try? JSONSerialization.jsonObject(with: jsonData1, options:[])
         if let array = json as? Array<[String :Any]>{
             jsonArray = array
         }

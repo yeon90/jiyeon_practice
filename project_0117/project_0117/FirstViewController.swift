@@ -30,6 +30,8 @@ class FirstViewController: UIViewController {
             yellowVC.dataDictionary = ["title" : "사전"]
         }
     }
+    
+    //segue대신 
     @IBAction func buttonTouched(_ sender: Any) {
  //   storyboard?.instantiateViewController(withIdentifier:"yellowVC")
     let yellowVC : YellowViewController = storyboard?.instantiateViewController(withIdentifier:"yellowVC") as! YellowViewController
