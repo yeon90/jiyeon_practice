@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E8A9CC1E2F0AE1009CC303 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8A9CB1E2F0AE1009CC303 /* YellowViewController.swift */; };
 		03EC3F821E2DE5A100699FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC3F811E2DE5A100699FB5 /* AppDelegate.swift */; };
 		03EC3F841E2DE5A100699FB5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC3F831E2DE5A100699FB5 /* FirstViewController.swift */; };
 		03EC3F861E2DE5A100699FB5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC3F851E2DE5A100699FB5 /* SecondViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03E8A9CB1E2F0AE1009CC303 /* YellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		03EC3F7E1E2DE5A100699FB5 /* project_0117.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_0117.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EC3F811E2DE5A100699FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03EC3F831E2DE5A100699FB5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				03EC3F8A1E2DE5A100699FB5 /* Assets.xcassets */,
 				03EC3F8C1E2DE5A100699FB5 /* LaunchScreen.storyboard */,
 				03EC3F8F1E2DE5A100699FB5 /* Info.plist */,
+				03E8A9CB1E2F0AE1009CC303 /* YellowViewController.swift */,
 			);
 			path = project_0117;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				03EC3F961E2E05DB00699FB5 /* MyModel.swift in Sources */,
 				03EC3F821E2DE5A100699FB5 /* AppDelegate.swift in Sources */,
 				03EC3F841E2DE5A100699FB5 /* FirstViewController.swift in Sources */,
+				03E8A9CC1E2F0AE1009CC303 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 				03EC3F941E2DE5A100699FB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

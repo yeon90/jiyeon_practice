@@ -19,7 +19,14 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    //segue 를 준비하는 단게에서 불림 - 화면이 넘어가기 전에 yellowVC의 값을 참조해서 걔한테 값을 넘겨줘 
+    //prepare를하더라도 yellowVC의 인스턴스만 만들어진 상태고 yellowVC의 화면 준비는 안된 상태이다. 이런 상태에서 값을 넘길 수 없음. --> yellowVC에 변수를 따로 만들어야함
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "firstSegue" {
+            let yellowVC : YellowViewController = segue.destination as! YellowViewController
+            yellowVC.titleString = "여기보세요"
+        }
+    }
 
 }
 
