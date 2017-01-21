@@ -37,16 +37,11 @@ class PhotoViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        // super클래스(UIViewController)에 들어있는 viewWillLayoutSubview를 불러줘
         photoImage.image = UIImage(named:(Dictionary1 ["image"] as? String)!)
         title1.text = Dictionary1 ["title"] as? String
         contents.text = Dictionary1 ["content"] as? String
         let commentArray = Dictionary1 ["comments"] as? Array<[String:Any]>
         comments.text = "\(commentArray?.count)"
-        
-        // 이전 VC에서 넘긴 값을 이 화면(yellowVC에 띄울수 있음)
-        
-       
     }
 
     /*
