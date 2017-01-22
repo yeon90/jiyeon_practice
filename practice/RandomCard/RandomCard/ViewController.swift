@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    var randomS = CardFace.clover
+    var randomS = CardFace.c
     var randomN = 0
     
     func shuffleDeck() -> (face:CardFace, number:Int) {
-        randomS = CardFace(rawValue: arc4random_uniform(CardFace.clover.rawValue+1))!
+        randomS = CardFace(rawValue: arc4random(CardFace.clover+1))!
         randomN = Int(arc4random_uniform(13))
         return (randomS,randomN+1)
         
@@ -45,3 +45,4 @@ class ViewController: UIViewController {
 
 
 
+	
