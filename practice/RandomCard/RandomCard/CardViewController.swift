@@ -8,12 +8,11 @@
 
 import UIKit
 
-enum CardFace : String{
-    case d = "diamond"
-    case h = "heart"
-    case s = "spade"
-    case c = "clover"
-    
+enum CardFace : UInt32{
+    case diamond
+    case heart
+    case spade
+    case clover
 }
 
 //var arrayS = Array<CardFace>()
@@ -27,8 +26,8 @@ class CardViewController: UIViewController {
     @IBOutlet weak var cardImageView: UIImageView!
     
 
-    var result : (CardFace, Int)=(.c,0)
-        
+    var result : (CardFace, Int)=(.clover,0)
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
@@ -37,13 +36,16 @@ class CardViewController: UIViewController {
         numberLabel.text = String(describing: result.1)
      
         var r0 = String(describing: result.0)
+        var r2 = String(result.0.rawValue.characters.first!)
         var r1 = String(result.1)
         
+       
+        
         func join(r00 : String, r11 : String) -> String {
-            return r00 + r11 + ".png"
+            return r00 + r11
         }
         
-        var imageName = String(join(r00: r0, r11 : r1))
+        var imageName = String(join(r00: r2, r11 : r1))
         
         
         cardImageView.image = UIImage(named: imageName!)

@@ -29,7 +29,7 @@ class ThirdViewController: UIViewController {
        
       
         
-        var random = Int(arc4random_uniform(3))
+        var random = Int(arc4random_uniform(4))
         let callData = mymodel?.item(atIndex: random )
         
         let photoDetail : PhotoViewController = storyboard?.instantiateViewController(withIdentifier:"PhotoViewController") as! PhotoViewController

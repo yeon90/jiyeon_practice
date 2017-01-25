@@ -40,8 +40,8 @@ class PhotoViewController: UIViewController {
         photoImage.image = UIImage(named:(Dictionary1 ["image"] as? String)!)
         title1.text = Dictionary1 ["title"] as? String
         contents.text = Dictionary1 ["content"] as? String
-        let commentArray = Dictionary1 ["comments"] as? Array<[String:Any]>
-        comments.text = "\(commentArray?.count)"
+        let commentArray = Dictionary1 ["comments"] as! Array<[String:Any]>
+        comments.text = "\(commentArray.count)"
     }
 
     /*
