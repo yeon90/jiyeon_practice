@@ -13,10 +13,9 @@ struct SolitaireDeck {
     var restArray : Array<Int> = []
     
     mutating func shuffleCards(){
-        
         var cardSet : Set<Int> = []
         while (cardSet.count < 52) {
-            cardSet.insert(Int(arc4random_uniform(52)))
+            cardSet.insert(Int(arc4random_uniform(52)+1))
         }
         
         for i in 0...6 {
@@ -30,11 +29,5 @@ struct SolitaireDeck {
         for i in 0...23 {
             restArray.append(cardSet.popFirst()!)
         }
-        
     }
-    
-    func displayCards(){
-        
-    }
-    
 }

@@ -10,9 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var button = UIButton(frame: CGRect(x: 700, y: 500, width: 100, height: 50)
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,8 +59,14 @@ class ViewController: UIViewController {
 
     
     }
-    
-    
+  
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let CGFrame1 = CGRect(x: 700, y: 500, width: 100, height: 50)
+        let button1 = UIButton(frame: CGFrame1)
+        view.addSubview(button1)
+    }
+
 }
 
 
