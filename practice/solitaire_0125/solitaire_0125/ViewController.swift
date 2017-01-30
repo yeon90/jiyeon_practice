@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var button = UIButton(frame: CGRect(x: 700, y: 500, width: 100, height: 50)
+    var button = UIButton(frame: CGRect(x: 700, y: 500, width: 100, height: 50))
 
     override func viewDidLoad() {
         super.viewDidLoad()

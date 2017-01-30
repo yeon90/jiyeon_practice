@@ -7,11 +7,14 @@
 //
 
 import UIKit
-var myLabel = UILabel()
-var myTextField = UITextField()
-var myUIView = UIView()
-var frame = CGRect(x: 10, y: 100, width: 80, height: 5)
-var myButton = UIButton()
+var CGFrameForLabel = CGRect(x: 10, y: 50, width: 100, height: 20)
+var labelView = UILabel(frame: CGFrameForLabel)
+var CGFrameForTextField = CGRect(x: 10, y: 80, width: 300, height: 20)
+var textFieldView = UITextField(frame: CGFrameForTextField)
+var CGFrameForView = CGRect(x: 10, y: 110, width: 250, height: 5)
+var myUIView = UIView(frame: CGFrameForView)
+var CGFrameForButton = CGRect(x: 10, y: 125, width: 150, height: 30)
+var myButton = UIButton(frame: CGFrameForButton)
 let C = [2,3,4,5,6,7,8,9,2,3,4,5]
 var S = [9,0,0,6,1,0,2,0,1,7,1,3,1]
 // 어떻게 텍스트필드의 입력값을 array로 바꾸는지 모르겠음.ㅠㅠㅠㅠ
@@ -24,29 +27,42 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        myLabel.text = "주민등록번호"
-        myLabel.textColor = UIColor.black
-        myLabel.textAlignment = NSTextAlignment.left
-//      myLabel.font = UIFont.systemFontSize(ofSize: 20)
-        myTextField.placeholder = "주민등록번호를 입력해주세요"
-        myUIView.alignmentRect(forFrame: frame)
+        view.addSubview(labelView)
+        view.addSubview(textFieldView)
+        view.addSubview(myUIView)
+        view.addSubview(myButton)
+        
+        labelView.text = "주민등록번호"
+        labelView.textColor = UIColor.black
+        labelView.textAlignment = NSTextAlignment.left
+        textFieldView.placeholder = "주민등록번호를 입력해주세요"
+       // textFieldView.textColor = UIColor.gray
+        textFieldView.font = UIFont.systemFont(ofSize: 15)
+        textFieldView.borderRect(forBounds: CGFrameForTextField)
+      
+        myUIView.backgroundColor = UIColor.red
         myButton.setTitle("검사", for: UIControlState.normal)
-        
-// label, textfield,View, button을 인터페이스빌더 없이 어떻게 화면에 출력하는지 모르겠음.ㅠㅠㅠㅠ
-        
+        myButton.backgroundColor = UIColor.darkGray
+        myButton.isEnabled = true
     }
-
+    
+    func checkSocialNumber (){
+        if V==S[13] {
+            myUIView.backgroundColor = UIColor.blue}
+        else {
+            myUIView.backgroundColor = UIColor.red}
+    }
+    
+//    func ButtonTouced () {
+//        myButton.addTarget(self, action : checkSocialNumber, for: ButtonTouced())
+//    }
+// 버튼 action 연결을 못하겠음 ㅠㅠ 
 //    func changeToArray () {
 //        for characters in myTextField.
 //    }
     
-    func checkSocialNumber (){
-        if V==S[13] {
-        myUIView.backgroundColor = UIColor.blue}
-        else {
-        myUIView.backgroundColor = UIColor.red}
-    }
     
+   
     
     
     override func didReceiveMemoryWarning() {
